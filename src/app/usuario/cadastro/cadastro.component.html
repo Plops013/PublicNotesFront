@@ -1,0 +1,25 @@
+<div class="container py-3 px-3 bg-white rounded">
+  <div class="card mb-3" style="max-width: 100%;">
+    <div class="card-body">
+      <h2 class="text-center">Cadastre-se</h2>
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="">Nickname</label>
+          <input type="text" name="nickname" id="nickname" [(ngModel)]="usuario.nickname" class="form-control"
+            placeholder="Como seu nome será visto por todos...">
+        </div>
+        <div class="form-group">
+          <label for="">Email</label>
+          <input type="text" placeholder="Relaxa que o email é só você quem vê..." name="email" id="email" [(ngModel)]="usuario.email" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Senha</label>
+          <input type="password" name="senha" id="senha" [(ngModel)]="usuario.senha" class="form-control" placeholder="Aqui vem aquela coisa que a gente sempre esquece...">
+        </div>
+        <div class="mx-auto text-center">
+          <button type="submit" class="btn btn-success mx-auto text-center">Cadastrar-se</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
