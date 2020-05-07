@@ -1,1 +1,34 @@
-<p>cadastrar works!</p>
+<div class="container pt-5">
+  <h2 class="text-center">Crie um <span class="rounded pb-2 pt-0 px-2 bg-primary" style="color: whitesmoke;">grupo</span> e segregue suas notas</h2>
+  <form (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input [(ngModel)]="grupoNotas.nome" type="text" name="nome" id="nome" class="form-control" placeholder="Nomezinho massa aqui...">
+    </div>
+    <div class="form-row">
+    <div class="pl-4 ml-1 custom-control custom-checkbox col-sm-2">
+      <input type="checkbox" class="custom-control-input" id="privado" name="privado">
+      <label class="custom-control-label" for="privado">Privado</label>
+    </div>
+    <div class="custom-control custom-checkbox col-sm-3">
+      <input type="checkbox" class="custom-control-input" id="protegido" name="protegido">
+      <label class="custom-control-label" for="protegido">Protegido por senha</label>
+    </div>
+  </div>
+  </form>
+  <script>
+    $('#protegido').click(function (){
+      if(this.checked){
+        alert('olá bobo');
+      }
+    })
+
+    $(document).on('change', '#protegido', function() {
+    if(this.checked) {
+      alert('olá bobo');
+      console.log('tamo juntao aq');
+    }
+});
+  </script>
+</div>

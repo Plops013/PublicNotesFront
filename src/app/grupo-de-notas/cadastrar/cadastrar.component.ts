@@ -1,3 +1,6 @@
+import { GrupoNotas } from './../../shared/models/grupo-notas.model';
+import { Router } from '@angular/router';
+import { GrupoDeNotasService } from './../../shared/service/grupo-de-notas.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private grupoDeNotasService: GrupoDeNotasService) { }
+
+  grupoNotas = new GrupoNotas();
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
+    this.save();
+    this.goToList();
+  }
+
+  save(){
+    this.grupoDeNotasService.createGrupo(this.grupoNotas).subscribe(data => {
+      this.grupoNotas = data;
+    });
+  }
+
+  goToList(){
+    this.router.navigate(['/grupo-de-notas/']);
   }
 
 }

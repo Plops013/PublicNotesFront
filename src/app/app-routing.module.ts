@@ -1,12 +1,13 @@
+import { GrupoDeNotasRoutingModule } from './grupo-de-notas/grupo-de-notas-routing.module';
+import { HomeComponent } from './home/home.component';
 import { UsuarioRoutingModule } from './usuario/usuario-routing.module';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './usuario/home/home.component';
-
 const routes: Routes = [
-  { path: 'usuario', component: HomeComponent },
-  ...UsuarioRoutingModule
+  { path: '', component: HomeComponent },
+  ...UsuarioRoutingModule,
+  ...GrupoDeNotasRoutingModule
 ];
 
 @NgModule({

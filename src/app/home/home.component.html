@@ -1,0 +1,35 @@
+<div class="container rounded bg-white" style="margin-top: 8%;">
+  <h1 class="text-center pt-3 pb-3 text-dark" >Bem Vindo Ao Hash Notes</h1>
+  <div class="row">
+    <div class="col-lg-4 mx-auto text-center">
+      <img class="pb-0 mb-0" src="../../assets/img/creative-pink.png"
+        style="width: 200px;" />
+      <h3 class="pt-0 mt-0" style="color: palevioletred;">
+        Aqui voce pode se <a style="color: palevioletred;" [routerLink]="['/usuario/cadastrar']" routerLinkActive="router-link-active" >registrar</a>
+      </h3>
+    </div>
+    <div class="col-lg-4 mx-auto text-center">
+      <img class="pb-0 mb-0" src="../../assets/img/creative-green.png"
+        style="width: 200px;" />
+        <h3 class="pt-0 mt-0" style="color: greenyellow;">
+          Organizar suas notas em  <a style="color: greenyellow;" [routerLink]="['/grupo-de-notas/']" >grupos</a>
+        </h3>
+    </div>
+    <div class="col-lg-4 mx-auto text-center">
+      <img class="pb-0 mb-0" src="../../assets/img/creative-purple.png"
+      style="width: 200px;" />
+      <h3 class="pt-0 mt-0" style="color: plum;">
+        Criar notas e ver as maravilhosas notas publicas
+      </h3>
+    </div>
+  </div>
+  <hr/>
+  <div class="row mb-5 justify-content-center pb-3">
+    <div class="col-lg-4">
+      <h4 class="py-2 mt-0 text-center rounded" style="color: blueviolet">
+      <a [routerLink]="['/usuario']" routerLinkActive="router-link-active"  style="color: blueviolet">Login</a> ou
+      <a [routerLink]="['/usuario/cadastrar']" routerLinkActive="router-link-active"  style="color: blueviolet">Registre-se Já</a>
+      </h4>
+    </div>
+  </div>
+</div>
