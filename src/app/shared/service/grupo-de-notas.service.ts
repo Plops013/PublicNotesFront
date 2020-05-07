@@ -12,19 +12,23 @@ export class GrupoDeNotasService {
 
   constructor(private http: HttpClient) {
     this.apiUrl = 'http://localhost:8080/grupo';
-   }
+  }
 
-   public getAll(): Observable<GrupoNotas[]>{
-     return this.http.get<GrupoNotas[]>(this.apiUrl);
-   }
+  public getAll(): Observable<GrupoNotas[]> {
+    return this.http.get<GrupoNotas[]>(this.apiUrl);
+  }
 
-   public delete(id: number): Observable<GrupoNotas>{
-      console.log(this.apiUrl + '/' + id);
-      return this.http.delete<GrupoNotas>(this.apiUrl + '/' + id);
-   }
+  public delete(id: number): Observable<GrupoNotas> {
+    console.log(this.apiUrl + '/' + id);
+    return this.http.delete<GrupoNotas>(this.apiUrl + '/' + id);
+  }
 
-   public createGrupo(grupoDeNotas: GrupoNotas): Observable<GrupoNotas>{
-     return this.http.post<GrupoNotas>(this.apiUrl, grupoDeNotas);
-   }
+  getById(id: number): Observable<GrupoNotas> {
+    return this.http.get<GrupoNotas>(this.apiUrl + '/' + id);
+  }
+
+  public createGrupo(grupoDeNotas: GrupoNotas): Observable<GrupoNotas> {
+    return this.http.post<GrupoNotas>(this.apiUrl, grupoDeNotas);
+  }
 
 }

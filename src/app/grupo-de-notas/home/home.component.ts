@@ -12,12 +12,14 @@ export class HomeComponent implements OnInit {
 
   constructor(private router: Router, private grupoDeNotasService: GrupoDeNotasService) { }
 
-  gruposDeNotas: GrupoNotas[];
+  gruposDeNotas: GrupoNotas[] = [];
 
   ngOnInit(): void {
     this.grupoDeNotasService.getAll().subscribe(data => {
       this.gruposDeNotas = data;
+      console.log(this.gruposDeNotas);
     });
+    console.log(this.gruposDeNotas);
   }
 
   excluir(id: number) {
@@ -26,6 +28,11 @@ export class HomeComponent implements OnInit {
   }
 
   editar(id: number) {
+    this.goEditar(id);
+  }
+
+  goEditar(id: number){
+    this.router.navigate(['/grupo-de-notas/cadastrar', id]);
   }
 
   refresh() {
