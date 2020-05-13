@@ -1,0 +1,36 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="container mx-3">
+    <div class="row">
+      <div class="col-lg-1 offset-lg-1 content-justify-right">
+        <img class="mr-0 mt-0 pt-0 pr-0 pl-3" src="../../../assets/img/pencil-logo.png" style="width: 100px;"
+          alt="Foto Aleatória aqui" />
+      </div>
+      <div class="col-lg-7 pt-2 text-right">
+        <textarea name="texto" id="texto" [(ngModel)]="nota.texto" class="pl-0 ml-0 form-control mb-0" placeholder="Oque quer compartilhar?"></textarea>
+      </div>
+    </div>
+    <div class="row ">
+      <div class="text-right offset-lg-7 col-lg-2">
+        <button class="col-sm-6 ml-2 btn btn-primary mt-0 py-0 px-1 btn-sm">Postar</button>
+      </div>
+    </div>
+  </div>
+</form>
+<hr />
+<div class="container">
+  <div style="background-color:#F1FEFF
+  ;" class="row rounded mb-1 ">
+    <p class="offset-lg-1 col-lg-8 text-right">Opa eae plops</p>
+    <div class=" col-lg-2">
+      <p class="font-weight-bold text-left text-primary py-0 my-0 pb-0">Carlinhos</p>
+      <p class="text-left pt-0 mt-0 small pb-0 mb-0"></p>
+    </div>
+  </div>
+  <div *ngFor="let nota of todasNotas" style="background-color: #F6F6F6 ;" class="row rounded mb-1 ">
+    <div class="offset-lg-1 col-lg-2">
+      <p class="font-weight-bold text-right text-primary py-0 my-0 pb-0">{{nota.usuario.nickname}}</p>
+      <p class="text-right pt-0 mt-0 small pb-0 mb-0">{{nota.horaPostagemString}}</p>
+    </div>
+    <p class="col-lg-8">{{nota.texto}}</p>
+  </div>
+</div>

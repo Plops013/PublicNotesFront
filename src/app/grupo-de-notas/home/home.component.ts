@@ -17,9 +17,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.grupoDeNotasService.getAll().subscribe(data => {
       this.gruposDeNotas = data;
-      console.log(this.gruposDeNotas);
     });
-    console.log(this.gruposDeNotas);
   }
 
   excluir(id: number) {

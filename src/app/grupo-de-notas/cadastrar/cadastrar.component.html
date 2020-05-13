@@ -9,7 +9,7 @@
         placeholder="Nomezinho massa aqui...">
     </div>
     <div class="mx-auto text-center">
-    <button *ngIf="grupoNotas.id === 0 ;else botaoAlterar" class="btn btn-success py-1" type="submit">Cadastrar</button>
+    <button *ngIf="grupoNotas.id === 0 ;else botaoAlterar" class="btn btn-primary py-1" type="submit">Cadastrar</button>
       <ng-template #botaoAlterar>
         <button class="btn btn-success py-1" type="submit">Alterar</button>
       </ng-template>

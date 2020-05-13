@@ -1,3 +1,4 @@
+import { NotaModule } from './nota/nota.module';
 import { HomeComponent } from './home/home.component';
 import { GrupoDeNotasModule } from './grupo-de-notas/grupo-de-notas.module';
 import { HttpClient } from '@angular/common/http';
@@ -18,14 +19,15 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     NavbarComponent,
     LogoComponent,
     HomeComponent,
-    PageNotFoundComponent
-  ],
+    PageNotFoundComponent,
+    ],
   imports: [
     FormsModule,
     BrowserModule,
     AppRoutingModule,
     UsuarioModule,
-    GrupoDeNotasModule
+    GrupoDeNotasModule,
+    NotaModule
   ],
   providers: [
   ],

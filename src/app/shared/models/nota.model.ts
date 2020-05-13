@@ -1,8 +1,9 @@
+import { Usuario } from './usuario';
 import { GrupoNotas } from './grupo-notas.model';
-export interface Nota{
+export class Nota{
   id: number;
-  titulo: string;
   texto: string;
-  gruponotas: GrupoNotas;
-  publico: boolean;
+  horaPostagem: Date;
+  horaPostagemString: string;
+  usuario: Usuario;
 }
